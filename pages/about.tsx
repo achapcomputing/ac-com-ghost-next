@@ -12,7 +12,7 @@ async function getAboutPage() {
     return pages[0];
 }
 
-export const getStaticProps = async () => {
+export const getInitialProps = async () => {
     const page = await getAboutPage();
     return {
         revalidate: 600,

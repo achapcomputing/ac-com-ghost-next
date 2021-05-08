@@ -20,7 +20,7 @@ async function getPosts() {
     return posts;
 }
 
-export const getStaticProps = async ({ params }) => {
+export const getInitialProps = async ({ params }) => {
     const articles = await getPosts();
     return {
         revalidate: 600,
