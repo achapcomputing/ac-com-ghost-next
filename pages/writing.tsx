@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { format } from 'path';
 import ArticleList from '../components/ArticleList'
+import Title from '../components/Title'
 import formatDate from '../utils/formatDate'
 
 const { BLOG_URL, CONTENT_API_KEY } = process.env;
@@ -21,7 +22,7 @@ async function getPosts() {
     return posts;
 }
 
-export const getInitialProps = async ({ params }) => {
+export const getStaticProps = async () => {
     const articles = await getPosts();
     articles.map((post) => {
         post.published_at = formatDate(post.published_at);
@@ -38,7 +39,7 @@ const Writing:React.FC<{ articles: Article[] }> = (props) => {
 
     return (
         <div>
-            <h1>My writing</h1>
+            <Title title="Read what I'm thinking about" />
             <ArticleList articles={articles} />
         </div>
     )
