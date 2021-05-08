@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import formatDate from '../../utils/formatDate'
 import Meta from '../../components/Meta'
+import Title from '../../components/Title'
 import slugStyles from '../../styles/slug.module.scss'
 
 const { BLOG_URL, CONTENT_API_KEY } = process.env;
@@ -54,11 +55,11 @@ const Article: React.FC<{article: Article}> = (props) => {
         <Meta title={article.title} />
         <div className={slugStyles.container}>
             <p className={slugStyles.goback}>
-                <Link href="/">
-                    <a>Go home</a>
+                <Link href="/writing">
+                    <a>Go back</a>
                 </Link>
             </p>
-            <h1>{article.title}</h1>
+            <Title title={article.title} />
             <p>Published: {article.published_at}</p>
             {/* okay to dangerously set because all urls come from ghost */}
             <div dangerouslySetInnerHTML={{__html: article.html}}></div> 

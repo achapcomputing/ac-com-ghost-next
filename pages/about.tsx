@@ -1,6 +1,5 @@
-import React from 'react'
-import { useRouter } from 'next/router'
 import Meta from '../components/Meta'
+import Title from '../components/Title'
 import aboutStyles from '../styles/About.module.scss'
 
 const { BLOG_URL, CONTENT_API_KEY } = process.env;
@@ -16,7 +15,7 @@ async function getAboutPage() {
 export const getStaticProps = async () => {
     const page = await getAboutPage();
     return {
-        // revalidate: 10,
+        revalidate: 600,
         props: { page }
     }
 }
@@ -32,16 +31,11 @@ const About: React.FC<{page: Page}> = (props) => {
 
     console.log(page);
 
-    const router = useRouter();
-    if (router.isFallback) {
-        return <h1>Loading...</h1>
-    }
-
     return (
         <>
             <Meta title='About Ashlyn' />
             <div className={aboutStyles.container}>
-                <h1>{page.title}</h1>
+                <Title title={page.title}/>
                 <div dangerouslySetInnerHTML={{__html: page.html}}></div> 
             </div>
             

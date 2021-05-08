@@ -5,16 +5,46 @@
     color: #fff;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-  }
-  
-  .nav ul {
+    justify-content: space-between;
+}
+
+.nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
     list-style: none;
-  }
-  
-  .nav ul li a {
+}
+
+.nav ul li a {
     margin: 5px 15px;
-  }
+}
+
+.nav li:hover,
+.nav li:focus,
+.nav li:active {
+	color: #3AAB58;
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    margin: 5px 15px;
+    // max-width: 100px;
+}
+
+.li:hover {
+    color: #0072b1;
+}
+.gh:hover{
+    color: #2b8fd0;
+}
+.tw:hover{
+    color: #55acee;
+}
+
+.li, .gh, .tw {
+    padding: 0px 10px;
+    width: 40px;
+}
