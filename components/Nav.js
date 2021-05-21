@@ -23,7 +23,7 @@ const Nav = () => {
             </div>
             <div className={navStyles.socials}>
                 <SocialIcon service={"LinkedIn"} link={"https://www.linkedin.com/in/apchapman/"} />
-                <SocialIcon service={"GitHub"} link={"https://github.com/achapcomputing"} />
+                <SocialIcon service={"GitHub"} link={"https://github.com/achapcomputing/ac-com-ghost-next"} />
                 <SocialIcon service={"Twitter"} link={"https://twitter.com/achapComputing"} />
             </div>
         </nav>

@@ -10,9 +10,8 @@ const ArticleItem = ({ article }) => {
                 <h3>{article.title}</h3>
                 <div>
                     <p>{article.published_at}</p>
-                    <p>{article.custom_excerpt}</p>                    
+                    <p>{article.custom_excerpt}</p>    
                 </div>
-
             </a>
         </Link>
         </>
