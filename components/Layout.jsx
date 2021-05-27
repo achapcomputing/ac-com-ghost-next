@@ -1,5 +1,5 @@
 import Header from './Header'
-import Meta from './Meta'
+import Meta from './Meta.jsx'
 import Nav from './Nav'
 import styles from '../styles/Layout.module.scss'
 

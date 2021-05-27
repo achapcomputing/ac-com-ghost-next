@@ -1,7 +1,10 @@
 
 ## Personal Website 2.0
+
 [AshlynChapman.com](https://ashlynchapman.com)
+
 Ghost CMS is deployed on Heroku. Ghost provides a clean interface for me to publish and manage my writing. Using Ghost's API, I can get access to my writing to display on my website.
+
 The code that you see on the live website is written using the Next.js library (based on React.js) and deployed on Vercel. 
 
 These two deployment methods allow me to host my site for free. 

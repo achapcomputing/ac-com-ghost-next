@@ -8,17 +8,17 @@ const Nav = () => {
             <div>
                 <ul>
                     <li>
-                        <Link href='/'><a>Home</a></Link>
+                        <Link href='/'>Home</Link>
                     </li>
                     <li>
-                        <Link href='/about'><a>About</a></Link>
+                        <Link href='/about'>About</Link>
                     </li>
                     <li>
                         <Link href='/writing'>Writing</Link>
                     </li>
-                    {/* <li>
-                        <Link href='coding'>Coding</Link>
-                    </li> */}
+                    <li>
+                        <Link href='/coding'>Coding</Link>
+                    </li>
                 </ul>
             </div>
             <div className={navStyles.socials}>
