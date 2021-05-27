@@ -1,6 +1,4 @@
 import Link from 'next/link'
-import { faLinkedin, faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import SocialIcon from './SocialIcon'
 import navStyles from '../styles/Nav.module.scss'
 
@@ -18,7 +16,9 @@ const Nav = () => {
                     <li>
                         <Link href='/writing'>Writing</Link>
                     </li>
-
+                    <li>
+                        <Link href='/coding'>Coding</Link>
+                    </li>
                 </ul>
             </div>
             <div className={navStyles.socials}>

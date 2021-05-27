@@ -1,5 +1,3 @@
-import Link from 'next/link'
-import ArticleList from '../components/ArticleList'
 import Header from '../components/Header'
 
 const { BLOG_URL, CONTENT_API_KEY } = process.env;
@@ -30,7 +28,6 @@ export const getStaticProps = async () => {
 
 const Home:React.FC<{ articles: Article[] }> = (props) => {
     const { articles } = props;
-    console.log(articles)
     return (
         <div>
             <Header />

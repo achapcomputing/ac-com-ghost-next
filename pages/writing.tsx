@@ -1,16 +1,14 @@
-import Link from 'next/link'
-import { format } from 'path';
-import ArticleList from '../components/ArticleList'
+import ArticleList from '../components/writing/ArticleList'
 import Title from '../components/Title'
 import formatDate from '../utils/formatDate'
 
 const { BLOG_URL, CONTENT_API_KEY } = process.env;
 
 type Article = {
-  title: string
-  slug: string
-  custom_excerpt: string
-  published_at: string
+    title: string
+    slug: string
+    custom_excerpt: string
+    published_at: string
 }
 
 async function getPosts() {
@@ -35,11 +33,10 @@ export const getStaticProps = async () => {
 
 const Writing:React.FC<{ articles: Article[] }> = (props) => {
     const { articles } = props;
-    console.log(articles)
 
     return (
         <div>
-            <Title title="Read what I'm thinking about" />
+            <Title title="Read what I am thinking about" />
             <ArticleList articles={articles} />
         </div>
     )

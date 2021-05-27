@@ -29,16 +29,13 @@ type Page = {
 const About: React.FC<{page: Page}> = (props) => {
     const { page } = props;
 
-    console.log(page);
-
     return (
         <>
             <Meta title='About Ashlyn' />
             <div className={aboutStyles.container}>
                 <Title title={page.title}/>
-                <div dangerouslySetInnerHTML={{__html: page.html}}></div> 
+                <div dangerouslySetInnerHTML={{__html: page.html}}></div>
             </div>
-            
         </>
     )
 }

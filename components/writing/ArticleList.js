@@ -1,5 +1,5 @@
 import ArticleItem from './ArticleItem'
-import articleStyles from '../styles/Article.module.scss'
+import articleStyles from '../../styles/Article.module.scss'
 
 const ArticleList = ({ articles }) => {
     return (

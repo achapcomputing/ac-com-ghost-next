@@ -7,29 +7,27 @@ import slugStyles from '../../styles/slug.module.scss'
 
 const { BLOG_URL, CONTENT_API_KEY } = process.env;
 
-type Article = {
+type Project = {
     title: string
     html: string
     slug: string
-    published_at: string
+    updated_at: string
 }
 
-async function getArticle(slug: string) {
+async function getProject(slug: string) {
     const res = await fetch(
-        `${BLOG_URL}/ghost/api/v3/content/posts/slug/${slug}?key=${CONTENT_API_KEY}&fields=title,slug,html,published_at`
+        `${BLOG_URL}/ghost/api/v3/content/pages/slug/${slug}?key=${CONTENT_API_KEY}&fields=title,slug,html,updated_at`
     ).then((res) => res.json());
-
-    const articles = res.posts;
-
-    return articles[0];
+    const projects = res.pages;
+    return projects[0];
 }
 
 export const getStaticProps = async ({ params }) => {
-    const article = await getArticle(params.slug);
-    article.published_at = formatDate(article.published_at);
+    const project = await getProject(params.slug);
+    project.updated_at = formatDate(project.updated_at);
     return {
         revalidate: 600,
-        props: { article }
+        props: { project }
     }
 }
 
@@ -42,8 +40,8 @@ export const getStaticPaths = () => {
     }
 }
 
-const Article: React.FC<{article: Article}> = (props) => {
-    const { article } = props;
+const Project: React.FC<{project: Project}> = (props) => {
+    const { project } = props;
 
     const router = useRouter();
     if (router.isFallback) {
@@ -52,20 +50,20 @@ const Article: React.FC<{article: Article}> = (props) => {
 
     return (
         <>
-        <Meta title={article.title} />
+        <Meta title={project.title} />
         <div className={slugStyles.container}>
             <p className={slugStyles.goback}>
-                <Link href="/writing">
+                <Link href="/coding">
                     <a>Go back</a>
                 </Link>
             </p>
-            <Title title={article.title} />
-            <p>Published: {article.published_at}</p>
+            <Title title={project.title} />
             {/* okay to dangerously set because all urls come from ghost */}
-            <div dangerouslySetInnerHTML={{__html: article.html}}></div> 
+            <div dangerouslySetInnerHTML={{__html: project.html}}></div>
+            <p>Page Last Updated: {project.updated_at}</p> 
         </div>
         </>
     );
 }
 
-export default Article
+export default Project

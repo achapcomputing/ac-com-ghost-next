@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { faLinkedin, faGithub, faTwitter, faMandalorian } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import navStyles from '../styles/Nav.module.scss'
 

@@ -7,10 +7,17 @@
 	margin: 0 auto;
 	justify-content: flex-start;
 	align-items: center;
+
+	a {
+		color: #3AAB58;
+	}
 }
 
 .goback {
 	text-align: left;
 	align-self: self-start;
 	cursor: pointer;
+	a {
+		color: black;
+	}
 }

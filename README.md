@@ -1,4 +1,11 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+## Personal Website 2.0
+[AshlynChapman.com](https://ashlynchapman.com)
+Ghost CMS is deployed on Heroku. Ghost provides a clean interface for me to publish and manage my writing. Using Ghost's API, I can get access to my writing to display on my website.
+The code that you see on the live website is written using the Next.js library (based on React.js) and deployed on Vercel. 
+
+These two deployment methods allow me to host my site for free. 
+
 
 ## Getting Started
 
@@ -32,3 +39,7 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+## References
+[Blinking Cursor](https://www.youtube.com/watch?v=7WwtzsSHdpI)

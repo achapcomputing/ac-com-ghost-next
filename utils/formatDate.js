@@ -2,7 +2,6 @@ export default function formatDate(isoDate) {
     const datetime = new Date(isoDate);
     const format = { year: 'numeric', month: 'numeric', day: 'numeric' };
     const formattedDate = datetime.toLocaleDateString(undefined, format);
-    console.log(formattedDate);
     return formattedDate;
 }
 
